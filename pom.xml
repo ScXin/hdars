@@ -56,7 +56,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <hbase.version>2.0.0-cdh6.0.1</hbase.version>
         <hadoop.version>3.0.0-cdh6.0.1</hadoop.version>
-        <jackson.version>2.9.0</jackson.version>
+        <jackson.version>2.11.1</jackson.version>
     </properties>
     <dependencies>
         <dependency>
