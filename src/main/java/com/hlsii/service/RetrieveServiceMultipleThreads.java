@@ -90,7 +90,8 @@ public class RetrieveServiceMultipleThreads extends RetrieveServiceImplementatio
      * @param pvDataFromStore
      *          the {@link PVDataFromStore}
      */
-    private void addPVData(PVDataFromStore pvDataFromStore, HashMap<String, RetrieveData> pvDataMap) {
+    @Override
+    public void addPVData(PVDataFromStore pvDataFromStore, HashMap<String, RetrieveData> pvDataMap) {
         if (pvDataFromStore == null) {
             logger.info("pvDataFromStore is Null!");
             return;
@@ -136,7 +137,8 @@ public class RetrieveServiceMultipleThreads extends RetrieveServiceImplementatio
      * @return
      *          the {@link RetrieveData}
      */
-    private void startDataRetrieval(String pvName, RetrieveParms parm, boolean enableHBaseCache,
+    @Override
+    public void startDataRetrieval(String pvName, RetrieveParms parm, boolean enableHBaseCache,
                                     List<Future<PVDataFromStore>> futures) {
         try {
             // Get first known event in Hadoop in order to identify the data storage.

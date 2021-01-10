@@ -491,7 +491,6 @@ public class HadoopStorageHBaseImpl implements IHadoopStorage {
 
         List<List<Event>> pvEventsList = scanDataFromHBase(info, startRowKey, endRowKey, isUsingDownSamplingTable,
                 startTimeStamp, enableCache, method == DownSamplingMethods.AVERAGE);
-
         if (pvEventsList.isEmpty()) {
             logger.debug("can not retrieval data from HBase for PV: " + pvName + " time:" + startTime);
             return new ArrayList<>();
@@ -709,6 +708,7 @@ public class HadoopStorageHBaseImpl implements IHadoopStorage {
                 logger.error("Scan data error! exception:" + ex.getMessage());
                 throw new IOException(ex.getMessage());
             }
+
             return pvEventsList;
     }
 

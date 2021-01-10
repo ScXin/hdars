@@ -160,7 +160,7 @@ public class MultiplePVDataString {
         dataStr.append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(ts));
         for (String pv : pvNameList) {
             String valStr = pvDataHashMap.get(pv);
-            dataStr.append(",").append(valStr==null?"null":valStr);
+            dataStr.append(",").append(valStr==null?"null":valStr);    // 这一行非常关键
         }
         return dataStr.toString();
     }

@@ -91,7 +91,6 @@ public class BufferedRetrieveService {
             // plus 1 because the split char (",").
             eventValueSizeOfOneRaw += this.retrieveService.calculateEventValueSize(pv) + 1;
         }
-
         // plus 1 because the new line char.
         totalSize = (long) (headStr.length() + 1 + (maxEventNumber * (eventValueSizeOfOneRaw + 1)));
     }

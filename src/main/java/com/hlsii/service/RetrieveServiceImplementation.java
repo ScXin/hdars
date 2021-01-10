@@ -9,6 +9,7 @@ import cls.stat_information_plugin.StatInformation;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.hlsii.commdef.PVDataFromStore;
 import hadarshbaseplugin.api.IHadoopStorage;
 import hadarshbaseplugin.commdef.PostProcessing;
 import com.hlsii.commdef.PVDataFormat;
@@ -31,6 +32,7 @@ import java.sql.Timestamp;
 import java.text.MessageFormat;
 import java.util.*;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
@@ -480,6 +482,16 @@ public class RetrieveServiceImplementation implements IRetrieveService, IHBaseHe
     }
 
     @Override
+    public void startDataRetrieval(String pvName, RetrieveParms parm, boolean enableHBaseCache, List<Future<PVDataFromStore>> futures) {
+
+    }
+
+    @Override
+    public void addPVData(PVDataFromStore pvDataFromStore, HashMap<String, RetrieveData> pvDataMap) {
+
+    }
+
+    @Override
     public boolean hbaseInService() {
         return hadoopRetrieveService != null;
     }
@@ -519,4 +531,6 @@ public class RetrieveServiceImplementation implements IRetrieveService, IHBaseHe
                     SiteConfigUtil.getHbaseCheckingInterval(), TimeUnit.MILLISECONDS);
         }
     }
+
+
 }

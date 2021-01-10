@@ -26,11 +26,6 @@ import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.*;
 
-//import hadarshbaseplugin.commdef.PostProcessing;
-//import com.hlsii.util.WebUtilUp;
-
-//import com.hlsii.service.RetrieveServiceImplementation;
-//import java.sql.Time;
 
 /**
  * @author ScXin
@@ -55,14 +50,7 @@ public class HdarsApiController {
     private IRetrievalMetrics metricsService;
 
 
-//    @Autowired
-//    private WebUtil webUtil;
 
-//    @Autowired
-//    private IRecordUserLogService recordUserLogService;
-
-//    @Autowired
-//    private QueryProfileService queryProfileService;
     private Logger logger = LoggerFactory.getLogger(getClass());
 
 
@@ -101,10 +89,7 @@ public class HdarsApiController {
             if (sampleDuration == 0) {
                 postProcessing = PostProcessing.NONE;
             }
-//            System.out.println("sampleduration==" + sampleDuration);
-//            System.out.println(postProcessing.toString());
-//            System.out.println("startTime==" + startTime);
-//            System.out.println("endTime==" + endTime);
+
             RetrieveParms retrieveParms = new RetrieveParms(pvList1, postProcessing, sampleDuration, startTime, endTime, true, PVDataFormat.QW);
             result = retrieveService.retrievePVData(retrieveParms);
         } catch (Exception ex) {
@@ -152,10 +137,7 @@ public class HdarsApiController {
                                      @PathVariable("startTime") String from,
                                      @PathVariable("endTime") String to) {
 
-//        System.out.println("pvListStr="+pvListStr);
-//        System.out.println("type="+type);
-//        System.out.println("from="+from);
-//        System.out.println("to="+to);
+
         PostProcessing postProcessing = PostProcessing.NONE;
         if (!StringUtils.isEmpty(type)) {
             postProcessing = PostProcessing.parse(type);
@@ -167,6 +149,7 @@ public class HdarsApiController {
         if (postProcessing != PostProcessing.NONE) {
             sampleDuration = retrieveService.getSamplingInterval(pvList.get(0), postProcessing, startTime, endTime);
         }
+
         RetrieveParms retrieveParms = new RetrieveParms(pvList, postProcessing, sampleDuration,
                 startTime, endTime, true, PVDataFormat.QW);
         BufferedRetrieveService in = new BufferedRetrieveService(retrieveService, retrieveParms);
