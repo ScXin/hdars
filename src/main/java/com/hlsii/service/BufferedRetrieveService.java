@@ -95,6 +95,9 @@ public class BufferedRetrieveService {
         totalSize = (long) (headStr.length() + 1 + (maxEventNumber * (eventValueSizeOfOneRaw + 1)));
     }
 
+
+
+
     /**
      * Read a line of data
      *

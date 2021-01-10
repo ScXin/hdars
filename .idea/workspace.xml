@@ -36,19 +36,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9258f269-6d14-42c2-88f6-fa7a361d6ce3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/util/ScheduledDeleteTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/service/BufferedRetrieveService2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hdars.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hdars.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlsii/commdef/MultiplePVDataString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/commdef/MultiplePVDataString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlsii/controller/DownloadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/controller/DownloadController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hlsii/controller/HdarsApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/controller/HdarsApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hlsii/service/BufferedRetrieveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/service/BufferedRetrieveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlsii/service/IRetrieveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/service/IRetrieveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlsii/service/RetrieveServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/service/RetrieveServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlsii/service/RetrieveServiceMultipleThreads.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/service/RetrieveServiceMultipleThreads.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlsii/util/ExportUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/util/ExportUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hadarshbaseplugin/HadoopStorageHBaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hadarshbaseplugin/HadoopStorageHBaseImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +106,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -234,7 +226,7 @@
       <workItem from="1609814802368" duration="7441000" />
       <workItem from="1609936176766" duration="2581000" />
       <workItem from="1609995423720" duration="522000" />
-      <workItem from="1610167592743" duration="20823000" />
+      <workItem from="1610167592743" duration="25294000" />
     </task>
     <task id="LOCAL-00001" summary="hdars最终版">
       <created>1594776988525</created>
