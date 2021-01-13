@@ -36,10 +36,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9258f269-6d14-42c2-88f6-fa7a361d6ce3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/service/BufferedRetrieveService2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlsii/controller/HdarsApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/controller/HdarsApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlsii/service/BufferedRetrieveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/service/BufferedRetrieveService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlsii/controller/DownloadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlsii/controller/DownloadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,17 +123,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HdarsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
       <module name="hdars" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hlsii.HdarsApplication" />
@@ -226,7 +214,10 @@
       <workItem from="1609814802368" duration="7441000" />
       <workItem from="1609936176766" duration="2581000" />
       <workItem from="1609995423720" duration="522000" />
-      <workItem from="1610167592743" duration="25294000" />
+      <workItem from="1610167592743" duration="26469000" />
+      <workItem from="1610326165815" duration="2883000" />
+      <workItem from="1610417822904" duration="903000" />
+      <workItem from="1610507622471" duration="1485000" />
     </task>
     <task id="LOCAL-00001" summary="hdars最终版">
       <created>1594776988525</created>

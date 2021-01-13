@@ -128,38 +128,38 @@ public class HdarsApiController {
         return rw;
     }
 
-    //    @RequiresRoles(value={"admin","user"},logical = Logical.OR )
-    @ApiOperation("创建下载任务，并计算下载信息")
-    @GetMapping("/history/downloadInfo/{pvListStr}/{type}/{startTime}/{endTime}")
-    public ReturnWrap downloadPVData(@PathVariable("pvListStr") String pvListStr,
-                                     @PathVariable("type") String type,
-                                     @PathVariable("startTime") String from,
-                                     @PathVariable("endTime") String to) {
-
-
-        PostProcessing postProcessing = PostProcessing.NONE;
-        if (!StringUtils.isEmpty(type)) {
-            postProcessing = PostProcessing.parse(type);
-        }
-        List<String> pvList = Arrays.asList(pvListStr.split(","));
-        Timestamp startTime = TimeUtil.convertFromISO8601String(from);
-        Timestamp endTime = TimeUtil.convertFromISO8601String(to);
-        int sampleDuration = 0;
-        if (postProcessing != PostProcessing.NONE) {
-            sampleDuration = retrieveService.getSamplingInterval(pvList.get(0), postProcessing, startTime, endTime);
-        }
-
-        RetrieveParms retrieveParms = new RetrieveParms(pvList, postProcessing, sampleDuration,
-                startTime, endTime, true, PVDataFormat.QW);
-
-        BufferedRetrieveService in = new BufferedRetrieveService(retrieveService, retrieveParms);
-        long length = in.getTotalSize();
-        DownloadTask task = downloadService.createTask(retrieveParms);
-        logger.info("Create download task:" + task.getId());
-        JSONObject downloadInfo = DownloadController.estimateDownload(length);
-        downloadInfo.put("taskid", task.getId());
-        return new ReturnWrap(Constants.RETURN_SUCCESS, downloadInfo);
-    }
+//    //    @RequiresRoles(value={"admin","user"},logical = Logical.OR )
+//    @ApiOperation("创建下载任务，并计算下载信息")
+//    @GetMapping("/history/downloadInfo/{pvListStr}/{type}/{startTime}/{endTime}")
+//    public ReturnWrap downloadPVData(@PathVariable("pvListStr") String pvListStr,
+//                                     @PathVariable("type") String type,
+//                                     @PathVariable("startTime") String from,
+//                                     @PathVariable("endTime") String to) {
+//
+//
+//        PostProcessing postProcessing = PostProcessing.NONE;
+//        if (!StringUtils.isEmpty(type)) {
+//            postProcessing = PostProcessing.parse(type);
+//        }
+//        List<String> pvList = Arrays.asList(pvListStr.split(","));
+//        Timestamp startTime = TimeUtil.convertFromISO8601String(from);
+//        Timestamp endTime = TimeUtil.convertFromISO8601String(to);
+//        int sampleDuration = 0;
+//        if (postProcessing != PostProcessing.NONE) {
+//            sampleDuration = retrieveService.getSamplingInterval(pvList.get(0), postProcessing, startTime, endTime);
+//        }
+//
+//        RetrieveParms retrieveParms = new RetrieveParms(pvList, postProcessing, sampleDuration,
+//                startTime, endTime, true, PVDataFormat.QW);
+//
+//        BufferedRetrieveService in = new BufferedRetrieveService(retrieveService, retrieveParms);
+//        long length = in.getTotalSize();
+//        DownloadTask task = downloadService.createTask(retrieveParms);
+//        logger.info("Create download task:" + task.getId());
+//        JSONObject downloadInfo = DownloadController.estimateDownload(length);
+//        downloadInfo.put("taskid", task.getId());
+//        return new ReturnWrap(Constants.RETURN_SUCCESS, downloadInfo);
+//    }
 
 
     /********************************download2info********************************************************************/
